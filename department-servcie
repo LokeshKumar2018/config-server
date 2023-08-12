@@ -1,0 +1,21 @@
+spring.datasource.url=jdbc:mysql://localhost:3306/department_db
+spring.datasource.username=root
+spring.datasource.password=root
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.datasource.hikari.maximum-pool-size=10
+
+spring.application.name=DEPARTMENT-SERVCIE
+eureka.instance.client.serverUrl.defaultZone=http://localhost:8761/eureka
+
+#Eureka registration prefer hostname instead of IP
+#https://github.com/spring-cloud/spring-cloud-netflix/blob/a7398842078319dcaa353a708c12bb7b9fa85a4e/docs/src/main/asciidoc/spring-cloud-netflix.adoc#prefer-ip-address
+eureka.instance.preferIpAddress=true
+#https://cloud.spring.io/spring-cloud-netflix/multi/multi__circuit_breaker_hystrix_clients.html
+#https://cloud.spring.io/spring-cloud-netflix/reference/html/
+
+#https://cloud.spring.io/spring-cloud-netflix/multi/multi_pr01.html
+# cmd torun multiple instance of application
+# java -jar target/department-service-0.0.1-SNAPSHOT.jar --server.port=8083
+#https://github.com/OpenFeign/feign#interface-annotations
